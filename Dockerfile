@@ -10,7 +10,7 @@ LABEL "com.github.actions.icon"="message-square"
 LABEL "com.github.actions.color"="red-dark"
 
 # Install Git
-RUN RUN apk add --no-cache git
+RUN apk add --no-cache git
 
 # Add the entry point
 ADD entrypoint.sh /entrypoint.sh
