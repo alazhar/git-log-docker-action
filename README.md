@@ -1,6 +1,6 @@
 # Git Log Docker Action
 
-Injects git log output into GitHub workflow environment.
+git log command with docker.
 
 ## Inputs
 
