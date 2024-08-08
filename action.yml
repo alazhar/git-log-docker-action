@@ -1,0 +1,22 @@
+name: "Git Log Action"
+description: "git log command"
+author: "alazhar"
+branding:
+  icon: arrow-right-circle
+  color: red-dark
+inputs:
+  start:
+    description: "Start git commit object (e.g. SHA, tag, branch name) in revision range (start..end)"
+    required: true
+  end:
+    description: "End git commit object (e.g. SHA, tag, branch name) in revision range (start..end)"
+    required: true
+outputs:
+  log:
+    description: "Git log output as environment variable LOG"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.start }}
+    - ${{ inputs.end }}
